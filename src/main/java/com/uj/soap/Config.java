@@ -1,4 +1,4 @@
-package com.example.howtodoinjava.springbootsoapservice;
+package com.uj.soap;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -16,11 +16,11 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 public class Config extends WsConfigurerAdapter {
 	@Bean
-	public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
+	public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(applicationContext);
 		servlet.setTransformWsdlLocations(true);
-		return new ServletRegistrationBean(servlet, "/service/*");
+		return new ServletRegistrationBean<MessageDispatcherServlet>(servlet, "/service/*");
 	}
 
 	@Bean(name = "studentDetailsWsdl")

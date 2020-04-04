@@ -6,7 +6,7 @@
 //
 
 
-package com.howtodoinjava.xml.school;
+package com.uj.soap.common;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

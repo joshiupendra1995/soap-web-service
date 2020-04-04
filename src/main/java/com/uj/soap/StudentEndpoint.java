@@ -1,4 +1,4 @@
-package com.example.howtodoinjava.springbootsoapservice;
+package com.uj.soap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -6,8 +6,8 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import com.howtodoinjava.xml.school.StudentDetailsRequest;
-import com.howtodoinjava.xml.school.StudentDetailsResponse;
+import com.uj.soap.common.StudentDetailsRequest;
+import com.uj.soap.common.StudentDetailsResponse;
 
 @Endpoint
 public class StudentEndpoint {
